@@ -28,8 +28,10 @@
       this.append(dd);
     };
     dl.appendParam("location.href", location.href);
+    dl.appendParam("location.origin", location.origin);
     dl.appendParam("location.pathname", location.pathname);
     dl.appendParam("location.search", location.search);
   </script>
+  {{ content }}
 </body>
 </html>
