@@ -1,11 +1,12 @@
 <!doctype html>
-<html lang="">
+<html lang="ja">
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
 </head>
 <body>
   <h1>{{ page.title }}</h1>
+  <h2>Jekyll</h2>
   <dl>
     <dt> site.url
     <dd> {{ site.url }}
@@ -14,5 +15,21 @@
     <dt> page.path
     <dd> {{ page.path }}
   </dl>
+  <h2>JavaScript</h2>
+  <dl id="js-param"></dl>
+  <script>
+    let dl = document.getElementById('js-param');
+    dl.appendParam = function (dtStr,ddStr){
+      let dt = document.createElement("dt");
+      dt.append(dtStr);
+      let dd = document.createElement("dd");
+      dd.append(ddStr);
+      this.append(dt);
+      this.append(dd);
+    };
+    dl.appendParam("location.href", location.href);
+    dl.appendParam("location.pathname", location.pathname);
+    dl.appendParam("location.search", location.search);
+  </script>
 </body>
 </html>
