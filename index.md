@@ -1,3 +1,4 @@
 ---
 layout: check
+title: index
 ---
